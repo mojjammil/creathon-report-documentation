@@ -1,12 +1,15 @@
 # Creathon Website Report and Documentation
-## Table of Contents
 - [Creathon Website Report and Documentation](#creathon-website-report-and-documentation)
-  - [Table of Contents](#table-of-contents)
+  - [Project Report](#project-report)
     - [Motivation and objective](#motivation-and-objective)
     - [Project Schedule](#project-schedule)
     - [Features and Requirements](#features-and-requirements)
-  - [Evaluation](#evaluation)
-  - [Documentation requirements](#documentation-requirements)
+    - [Project Evaluation](#project-evaluation)
+  - [Documentation](#documentation)
+    - [Installation and setup](#installation-and-setup)
+    - [Updates and Maintenance](#updates-and-maintenance)
+    - [API reference](#api-reference)
+## Project Report
 ### [Motivation and objective](#motivation-objective)
 I was approached with the Creathon website development as a similar project called [TeenMinno project](https://wiki.metropolia.fi/display/teiniminnoesp/TEINIMINNOTALKOOT+2016-2018) was being managed by the same project manager Laura-Maija Hero. Even though Creathon had similarity in certain objectives, as a project with its own identity, a standalone website was in need to enhance Creathon's activities management.
 
@@ -64,24 +67,43 @@ As for the final technical features that were developed are:
   ![Normal sidebar](images/5_sidebar.png)_Figure: Regular sidebar on the right_
   ![Custom sidebar](images/6_sidebar_custom.png)_Figure: Custom dynamically upgrading sidebar for reports links on the right_
 
-## Evaluation
+### Project Evaluation
 The website is meant to represent a youth focused creative project and from that perspective, the final fun and colorful appearance is quite able to do so. The overall graphic, theme color combo, and spinner when page loading is a decent implementation from visual perspective that goes with Creathon's theme. 
 
 Functionally a lot more could have been done but project timeline is always a constraint which sometimes does not allow us to do everything we could wish to do. However, with given time, the final website does provide more than being just a minimum viable product. 
 
 From UX and modern UI trend perspective, a single page UI would have allowed the website to look more modern. However, as the website is very text content heavy and requires separate blog sections, it does not look dated even from UX UI point of view. 
 
-Lastly, with a bit longer development timeline, the frontend could have been made faster if it was developed with perhaps faster frontend generators such as React.js or frameworks such as Gatsby.js.  
+Lastly, with a bit longer development timeline, the frontend could have been made faster if it was developed with perhaps faster frontend generators such as React.js or frameworks such as Gatsby.js. 
 
-## Documentation requirements
-- ~~Project motivation and description~~
-- ~~Original project schedule and the actual project schedule~~
-- ~~*Description of features* (what does your web app do, what are the most important features). Original planned functionalities and was all of them implemented~~
-- Own eevaluation of the final product
-- *Motivation* (what problem does your web app solve, why did you decide to build this project)
-- *Installation and set up guide* ("git clone and run with npm start"... "make sure you have these libraries installed")
-- *howto*: small examples of use cases (include pictures/gifs if possible)
-- *API reference* (if you are using an API, provide a link to their reference doc)
-- *Credits* (links to the profiles of contributors)
-- *FAQ*
-- *Contact information*
+## Documentation
+Creathon website is developed using Wordpress. This section will contain installation, management and usage instructions of the website.
+
+### Installation and setup
+I exported the Wordpress website snapshot using [Duplicator](https://fi.wordpress.org/plugins/duplicator/) extension. 
+
+The exported package comes with two files: The website files as ZIP archive and an installer.
+
+![Wordpress Export](images/7_wordpress_snapshot.png)
+
+_Figure: Wordpress website file archive and installer_
+
+The installation instructions are as follows:
+1. Place the two files (installer.php and something ending with .zip) into the folder you’ll want the WordPress site in which usually is in public_html path.
+2. In a web browser (with your server running) visit the installer.php file.
+3. If everything works, you should see a wizard screen similar to the style you saw in your WordPress dashboard. You’ll need to click “I have read and accept all terms & notices.”
+Click “Next”
+![Installer first page](images/8_installer_1.jpg)
+4. Here you’ll need to have a database ready. Then tell Duplicator your database name, user, and password. 
+5. If it all works, you’ll see “Step 4 of 4: Test Site”. There you’ll want to click the “Site Login” button, and log in to your WordPress site using the same username and password as you have on the remote site.
+6. You should now be in a full-fledged copy of your WordPress site. Make sure to clean up after Duplicator. It’ll give a helpful admin notice (banner at the top) showing you think. If you click “Take me there now!” you’ll then be on the screen to click “2. Remove Installation Files Now!” After you do that, you’re done.
+
+### Updates and Maintenance
+To keep the website secured and stable, it is a good idea to always keep the plugins and Wordpress software updated as those usually come with security and stability patches.
+
+When there are updates available, they are marked as notifications in __Updates__ section in Dashboard.
+![Update Notification](images/9_update_notification.png)
+![Update](images/10_update.png)
+
+### API reference
+The Youtube feed on Creathon's website requires YouTube Data API. If some update is needed regarding that, please check the [official documentation](https://developers.google.com/youtube/v3/getting-started). 
